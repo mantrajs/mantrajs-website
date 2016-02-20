@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="startpage-layout">
+
+    {% include top-navigation.html %}
+
+    <div class="image-header">
+      <div class="logo-type">
+        <img src="/assets/mantra_logo_horizontal.png"/>
+        <span>An Application Architecture for Meteor</span><br/>
+        <a href="http://tutor.mantrajs.com/" class="cta-btn green">get started</a>
+      </div>
+    </div>
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

@@ -1,0 +1,333 @@
+/**
+ * Site header
+ */
+.image-header {
+    background-image: url('/assets/header_mountains.jpg');
+    height: 100vh;
+    background-size: cover;
+}
+
+.site-header {
+    border-top: 5px solid $mantra-green-dark;
+    border-bottom: 1px solid $grey-color-light;
+    min-height: 56px;
+
+    // Positioning context for the mobile navigation icon
+    position: relative;
+}
+
+.default-layout {
+  .image-header {
+    height: 300px;
+    background-position-y: -80px;
+  }
+}
+
+.logo-type {
+    margin: 0 auto;
+    display: table;
+    padding-top: 50vh;
+    text-align: center;
+    span {
+        text-transform: uppercase;
+        color: white;
+        display: block;
+        margin-top: 20px;
+        font-weight: 100;
+        font-size: 1em;
+        letter-spacing: 2px;
+    }
+}
+
+.top-navigation {
+  position: fixed;
+  width: 100%;
+  padding-top: 20px;
+  background-color: rgba(255,255,255,0.8);
+  ul {
+    list-style: none;
+    display: inline-block;
+    li {
+      float: left;
+      margin-right: 20px;
+      svg {
+        margin-right: 5px;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+      }
+      a {
+        text-transform: uppercase;
+        color: black;
+        font-weight: 100;
+        font-size: 14px;
+      }
+    }
+  }
+  ul.right {
+    float: right;
+    margin-top: 6px;
+  }
+}
+
+.site-title {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 56px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+
+    &,
+    &:visited {
+        color: $grey-color-dark;
+    }
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100;
+  color: $text-color;
+  span {
+    font-size: 0.7em;
+    display: inline-block;
+    color: $text-color-light;
+    border-top: 2px solid $text-color;
+    padding: 25px 0;
+    margin-top: 5px;
+    text-transform: lowercase;
+  }
+}
+
+.site-nav {
+    float: right;
+    line-height: 56px;
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
+
+        // Gaps between nav items, but not on the last one
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    @include media-query($on-palm) {
+        position: absolute;
+        top: 9px;
+        right: $spacing-unit / 2;
+        background-color: $background-color;
+        border: 1px solid $grey-color-light;
+        border-radius: 5px;
+        text-align: right;
+
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+
+            > svg {
+                width: 18px;
+                height: 15px;
+
+                path {
+                    fill: $grey-color-dark;
+                }
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 5px 10px;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+            margin-left: 20px;
+        }
+    }
+}
+
+.cta-btn {
+  padding: 15px 40px;
+  display: inline-block;
+  background-color: $mantra-green;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.fullwidth-container.orange {
+  overflow: auto;
+
+  background-color: $mantra-orange-light;
+
+}
+
+/**
+ * Site footer
+ */
+.site-footer {
+    border-top: 5px solid $mantra-green-dark;
+    padding: $spacing-unit 0;
+    background-color: $mantra-green;
+}
+
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.footer-col-wrapper {
+    font-size: 15px;
+    color: $text-color;
+    margin-left: -$spacing-unit / 2;
+    @extend %clearfix;
+}
+
+.footer-col {
+    float: left;
+    margin-bottom: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+    width:         calc(45% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+    .footer-col-1,
+    .footer-col-2 {
+        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        width:         calc(50% - (#{$spacing-unit} / 2));
+    }
+
+    .footer-col-3 {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+@include media-query($on-palm) {
+    .footer-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+
+
+/**
+ * Page content
+ */
+.page-content {
+    padding: $spacing-unit 0;
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
