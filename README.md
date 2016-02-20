@@ -1,5 +1,11 @@
 # Mantra JS Website
 
-This is the first proposal of the Mantra JS website.
+This website is build using Jekyll static website builder.
 
-https://github.com/kadirahq/mantra/issues/82
+Run Jekyll locally using this command:
+
+```
+bundle exec jekyll serve --watch
+```
+
+http://ddresch.github.io/mantrajs-website.
