@@ -16,4 +16,4 @@ bundle exec jekyll serve --watch
 
 Check the online version:
 
-http://ddresch.github.io/mantrajs-website.
+http://mantrajs.github.io/mantrajs-website.
